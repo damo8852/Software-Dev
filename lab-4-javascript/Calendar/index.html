@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Calendar</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <script src="../Calendar/resources/js/script.js"></script>
+    <link rel="stylesheet" href="../Calendar/resources/css/style.css" />
+  </head>
+
+  <body onload="initializeCalendar()">
+    <div class="container">
+      <div class="row">
+        <div id="calendar" class="row"></div>
+      </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="event-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="eventForm">
+              <div class="mb-3">
+                <label for="event_name" class="form-label">Event Name:</label>
+                <input type="text" class="form-control" id="event_name" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="event_weekday" class="form-label">Weekday:</label>
+                <select class="form-select" id="event_weekday" required>
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                  <option value="Thursday">Thursday</option>
+                  <option value="Friday">Friday</option>
+                  <option value="Saturday">Saturday</option>
+                  <option value="Sunday">Sunday</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="event_time" class="form-label">Time:</label>
+                <input type="time" class="form-control" id="event_time" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="event_modality" class="form-label">Event Modality:</label>
+                <select class="form-select" id="event_modality" required onchange="updateLocationOptions()">
+                  <option value="in-person" default>In Person</option>
+                  <option value="remote">Remote</option>
+                </select>
+              </div>
+
+              <div class="mb-3 hidden" id="location_field">
+                <label for="event_location" class="form-label">Location:</label>
+                <input type="text" class="form-control" id="event_location" placeholder="Enter event location" />
+              </div>
+
+              <div class="mb-3 hidden" id="attendees_field">
+                <label for="event_attendees" class="form-label">Attendees:</label>
+                <input type="text" class="form-control" id="event_attendees" placeholder="Enter names of attendees, separated by commas" />
+              </div>
+
+              <div class="mb-3 hidden" id="remote_url_field">
+                <label for="event_remote_url" class="form-label">Remote URL:</label>
+                <input
+                  type="url"
+                  class="form-control"
+                  id="event_remote_url"
+                  placeholder="Enter remote meeting URL (e.g., Zoom, MS Teams)"
+                  pattern="https?://.+"
+                  title="Please enter a valid URL starting with http:// or https://"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary">Create Event</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="submit_button">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

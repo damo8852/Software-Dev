@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://us-east.storage.cloudconvert.com/tasks/0f72abc7-ec77-44ac-92d2-bcab20643212/Candy_Land_2004_Board.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240919%2Fva%2Fs3%2Faws4_request&X-Amz-Date=20240919T000003Z&X-Amz-Expires=86400&X-Amz-Signature=156909b64b8c7cf2e6551d379db50abe26f915b8df840c1253b4bca8a826ef0a&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Candy_Land_2004_Board.jpg%22&response-content-type=image%2Fjpeg&x-id=GetObject

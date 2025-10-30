@@ -1,0 +1,51 @@
+{{!-- <h1>Register</h1>
+<form action="/register" method="POST">
+  <div class="mb-3">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" class="form-control" id="username" name="username" required>
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" name="password" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
+</form> --}}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Register</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <div class="container d-flex justify-content-center align-items-center flex-column" style="height: 80vh;">
+    <h1 class="mb-4">Register</h1>
+    <form method="POST" action="/register" class="w-50">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Complete Registration</button>
+    </form>
+    <p>Go back to <a href="/login">Login</a>.</p>
+  </div>
+
+  <footer class="text-center text-muted mt-auto">
+    <p>&copy; Copyright 2024 : CSCI 3308</p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

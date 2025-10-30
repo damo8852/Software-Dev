@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Events</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Discover Events</h2>
+        {{> message }}
+        <div class="row">
+            {{#if results.length}}
+                {{#each results}}
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="{{#if images.0.url}}{{images.0.url}}{{else}}/images/default-event.jpg{{/if}}" class="card-img-top" alt="{{name}}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{name}}</h5>
+                            <p class="card-text">
+                                {{#if dates.start.localDate}}
+                                Date: {{dates.start.localDate}}
+                                {{/if}}
+                                <br>
+                                {{#if dates.start.localTime}}
+                                Time: {{dates.start.localTime}}
+                                {{/if}}
+                            </p>
+                            <a href="{{url}}" target="_blank" class="btn btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            {{else}}
+                <p class="text-center">No events found. Please try again later.</p>
+            {{/if}}
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

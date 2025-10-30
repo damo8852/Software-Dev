@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "0ee4229c-2d51-4ea9-84c6-ae3973c27853",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38774742"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getUserInfo?username=Fan&city=Zheleznodorozhnyy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getUserInfo"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Fan"
+						},
+						{
+							"key": "city",
+							"value": "Zheleznodorozhnyy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Daniel Monteiro\",\r\n    \"username\": \"damo8852\",\r\n    \"email\": \"123@gmail.com\",\r\n    \"city\": \"Boulder\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/add_user"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"danny lowe\",\r\n    \"username\": \"dlo123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/update_user"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/delete_user/:dlo123123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete_user",
+						":dlo123123"
+					],
+					"variable": [
+						{
+							"key": "dlo123123",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
